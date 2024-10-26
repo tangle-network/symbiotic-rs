@@ -24,22 +24,24 @@ To add new contracts to the Rust bindings, follow these steps:
    import "path/to/NewContract.sol";
    ```
 
-2. Add the JSON file for the new contract to the list in `build.rs`:
+2. Add the JSON file for the new contract to the list in the `test_forge_build_and_json_extraction` test in `src/lib.rs`:
    ```rust
    let json_files = vec![
        // ... existing files ...
-       "contracts/out/NewContract.sol/NewContract.json",
+       "NewContract.sol/NewContract.json",
    ];
    ```
 
-3. Expose the new contract in `src/lib.rs`:
+3. Run the test to generate the JSON files:
+   ```
+   cargo test test_forge_build_and_json_extraction
+   ```
+
+4. Add the new contract to the `generate_sol_types!` macro in `src/lib.rs`:
    ```rust
-   sol!(
-       #[allow(missing_docs)]
-       #[sol(rpc)]
-       #[derive(Debug, Serialize, Deserialize)]
-       NewContract,
-       "json/NewContract.json"
+   generate_sol_types!(
+       // ... existing contracts ...
+       NewContract, "json/NewContract.json",
    );
    ```
 
