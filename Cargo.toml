@@ -8,8 +8,9 @@ exclude = ["contracts"]
 alloy-contract = { version = "0.1" }
 alloy-sol-types = { version = "0.7.2", features = ["json"] }
 serde = { version = "1.0.208" }
-serde_json = { version = "1.0" }
 
+[dev-dependencies]
+serde_json = { version = "1.0" }
 
 [features]
 default = ["std"]
