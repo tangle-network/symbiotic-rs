@@ -1969,6 +1969,7 @@ dependencies = [
  "alloy-contract",
  "alloy-sol-types",
  "serde",
+ "serde_json",
 ]
 
 [[package]]

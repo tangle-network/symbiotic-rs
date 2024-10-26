@@ -6,7 +6,10 @@ edition = "2021"
 [dependencies]
 alloy-contract = { version = "0.1" }
 alloy-sol-types = { version = "0.7.2", features = ["json"] }
-serde = { version = "1.0.208", default-features = false }
+serde = { version = "1.0.208" }
+
+[build-dependencies]
+serde_json = { version = "1.0" }
 
 [features]
 default = ["std"]

@@ -90,10 +90,25 @@ fn main() {
         let source = root.join(json_file);
         let destination = root.join("json").join(json_file.split('/').last().unwrap());
         
-        if let Err(e) = fs::copy(&source, &destination) {
-            println!("Failed to copy {}: {}", json_file, e);
+        // Read the source JSON file
+        let json_content = fs::read_to_string(&source)
+            .expect(&format!("Failed to read {}", source.display()));
+        
+        // Parse the JSON content
+        let json: serde_json::Value = serde_json::from_str(&json_content)
+            .expect(&format!("Failed to parse JSON from {}", source.display()));
+        
+        // Extract only the "abi" field
+        if let Some(abi) = json.get("abi") {
+            let abi_only = serde_json::json!({ "abi": abi });
+            
+            // Write the "abi" only JSON to the destination
+            fs::write(&destination, serde_json::to_string_pretty(&abi_only).unwrap())
+                .expect(&format!("Failed to write to {}", destination.display()));
+            
+            println!("Extracted ABI from {} to {}", source.display(), destination.display());
         } else {
-            println!("Copied {} to {}", source.display(), destination.display());
+            println!("No 'abi' field found in {}", source.display());
         }
     }
 

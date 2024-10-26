@@ -1,1 +1,85 @@
-{"abi":[{"type":"function","name":"entity","inputs":[{"name":"index","type":"uint256","internalType":"uint256"}],"outputs":[{"name":"","type":"address","internalType":"address"}],"stateMutability":"view"},{"type":"function","name":"isEntity","inputs":[{"name":"entity_","type":"address","internalType":"address"}],"outputs":[{"name":"","type":"bool","internalType":"bool"}],"stateMutability":"view"},{"type":"function","name":"registerOperator","inputs":[],"outputs":[],"stateMutability":"nonpayable"},{"type":"function","name":"totalEntities","inputs":[],"outputs":[{"name":"","type":"uint256","internalType":"uint256"}],"stateMutability":"view"},{"type":"event","name":"AddEntity","inputs":[{"name":"entity","type":"address","indexed":true,"internalType":"address"}],"anonymous":false},{"type":"error","name":"EntityNotExist","inputs":[]},{"type":"error","name":"OperatorAlreadyRegistered","inputs":[]}],"bytecode":{"object":"0x6080604052348015600f57600080fd5b506102bf8061001f6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806314887c58146100515780632acde098146100795780635cd8b15e14610083578063b42ba2a214610099575b600080fd5b61006461005f366004610231565b6100c4565b60405190151581526020015b60405180910390f35b6100816100d6565b005b61008b610108565b604051908152602001610070565b6100ac6100a736600461025a565b610119565b6040516001600160a01b039091168152602001610070565b60006100d08183610125565b92915050565b6100df336100c4565b156100fd576040516342ee68b560e01b815260040160405180910390fd5b6101063361014a565b565b6000610114600061018d565b905090565b60006100d08183610197565b6001600160a01b038116600090815260018301602052604081205415155b9392505050565b6101556000826101a3565b506040516001600160a01b038216907fb919910dcefbf753bfd926ab3b1d3f85d877190c3d01ba1bd585047b99b99f0b90600090a250565b60006100d0825490565b600061014383836101b8565b6000610143836001600160a01b0384166101e2565b60008260000182815481106101cf576101cf610273565b9060005260206000200154905092915050565b6000818152600183016020526040812054610229575081546001818101845560008481526020808220909301849055845484825282860190935260409020919091556100d0565b5060006100d0565b60006020828403121561024357600080fd5b81356001600160a01b038116811461014357600080fd5b60006020828403121561026c57600080fd5b5035919050565b634e487b7160e01b600052603260045260246000fdfea264697066735822122024ad4de20f9f252c5784af81def4131bf14f2c4ac9d52785418f06ca804ed1a364736f6c63430008190033","sourceMap":"183:289:39:-:0;;;;;;;;;;;;;;;;;;;","linkReferences":{}},"deployedBytecode":{"object":"0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806314887c58146100515780632acde098146100795780635cd8b15e14610083578063b42ba2a214610099575b600080fd5b61006461005f366004610231565b6100c4565b60405190151581526020015b60405180910390f35b6100816100d6565b005b61008b610108565b604051908152602001610070565b6100ac6100a736600461025a565b610119565b6040516001600160a01b039091168152602001610070565b60006100d08183610125565b92915050565b6100df336100c4565b156100fd576040516342ee68b560e01b815260040160405180910390fd5b6101063361014a565b565b6000610114600061018d565b905090565b60006100d08183610197565b6001600160a01b038116600090815260018301602052604081205415155b9392505050565b6101556000826101a3565b506040516001600160a01b038216907fb919910dcefbf753bfd926ab3b1d3f85d877190c3d01ba1bd585047b99b99f0b90600090a250565b60006100d0825490565b600061014383836101b8565b6000610143836001600160a01b0384166101e2565b60008260000182815481106101cf576101cf610273565b9060005260206000200154905092915050565b6000818152600183016020526040812054610229575081546001818101845560008481526020808220909301849055845484825282860190935260409020919091556100d0565b5060006100d0565b60006020828403121561024357600080fd5b81356001600160a01b038116811461014357600080fd5b60006020828403121561026c57600080fd5b5035919050565b634e487b7160e01b600052603260045260246000fdfea264697066735822122024ad4de20f9f252c5784af81def4131bf14f2c4ac9d52785418f06ca804ed1a364736f6c63430008190033","sourceMap":"183:289:39:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;518:127:48;;;;;;:::i;:::-;;:::i;:::-;;;470:14:100;;463:22;445:41;;433:2;418:18;518:127:48;;;;;;;;299:171:39;;;:::i;:::-;;696:97:48;;;:::i;:::-;;;643:25:100;;;631:2;616:18;696:97:48;497:177:100;844:118:48;;;;;;:::i;:::-;;:::i;:::-;;;-1:-1:-1;;;;;1028:32:100;;;1010:51;;998:2;983:18;844:118:48;864:203:100;518:127:48;588:4;611:27;588:4;630:7;611:18;:27::i;:::-;604:34;518:127;-1:-1:-1;;518:127:48:o;299:171:39:-;350:20;359:10;350:8;:20::i;:::-;346:85;;;393:27;;-1:-1:-1;;;393:27:39;;;;;;;;;;;346:85;441:22;452:10;441;:22::i;:::-;299:171::o;696:97:48:-;742:7;768:18;:9;:16;:18::i;:::-;761:25;;696:97;:::o;844:118::-;910:7;936:19;910:7;949:5;936:12;:19::i;8871:165:35:-;-1:-1:-1;;;;;9004:23:35;;8951:4;4360:21;;;:14;;;:21;;;;;;:26;;8974:55;8967:62;8871:165;-1:-1:-1;;;8871:165:35:o;968:133:48:-;1038:22;:9;1052:7;1038:13;:22::i;:::-;-1:-1:-1;1076:18:48;;-1:-1:-1;;;;;1076:18:48;;;;;;;;968:133;:::o;9117:115:35:-;9180:7;9206:19;9214:3;4556:18;;4474:107;9574:156;9648:7;9698:22;9702:3;9714:5;9698:3;:22::i;8316:150::-;8386:4;8409:50;8414:3;-1:-1:-1;;;;;8434:23:35;;8409:4;:50::i;4923:118::-;4990:7;5016:3;:11;;5028:5;5016:18;;;;;;;;:::i;:::-;;;;;;;;;5009:25;;4923:118;;;;:::o;2241:406::-;2304:4;4360:21;;;:14;;;:21;;;;;;2320:321;;-1:-1:-1;2362:23:35;;;;;;;;:11;:23;;;;;;;;;;;;;2544:18;;2520:21;;;:14;;;:21;;;;;;:42;;;;2576:11;;2320:321;-1:-1:-1;2625:5:35;2618:12;;14:286:100;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;168:23;;-1:-1:-1;;;;;220:31:100;;210:42;;200:70;;266:1;263;256:12;679:180;738:6;791:2;779:9;770:7;766:23;762:32;759:52;;;807:1;804;797:12;759:52;-1:-1:-1;830:23:100;;679:180;-1:-1:-1;679:180:100:o;1072:127::-;1133:10;1128:3;1124:20;1121:1;1114:31;1164:4;1161:1;1154:15;1188:4;1185:1;1178:15","linkReferences":{}},"methodIdentifiers":{"entity(uint256)":"b42ba2a2","isEntity(address)":"14887c58","registerOperator()":"2acde098","totalEntities()":"5cd8b15e"},"rawMetadata":"{\"compiler\":{\"version\":\"0.8.25+commit.b61c2a91\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"EntityNotExist\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"OperatorAlreadyRegistered\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"entity\",\"type\":\"address\"}],\"name\":\"AddEntity\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"entity\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"entity_\",\"type\":\"address\"}],\"name\":\"isEntity\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"registerOperator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalEntities\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"AddEntity(address)\":{\"params\":{\"entity\":\"address of the added entity\"}}},\"kind\":\"dev\",\"methods\":{\"entity(uint256)\":{\"params\":{\"index\":\"index of the entity to get\"},\"returns\":{\"_0\":\"address of the entity\"}},\"isEntity(address)\":{\"params\":{\"account\":\"address to check\"},\"returns\":{\"_0\":\"if the given address is an entity\"}},\"totalEntities()\":{\"returns\":{\"_0\":\"total number of entities added\"}}},\"version\":1},\"userdoc\":{\"events\":{\"AddEntity(address)\":{\"notice\":\"Emitted when an entity is added.\"}},\"kind\":\"user\",\"methods\":{\"entity(uint256)\":{\"notice\":\"Get an entity given its index.\"},\"isEntity(address)\":{\"notice\":\"Get if a given address is an entity.\"},\"registerOperator()\":{\"notice\":\"Register the caller as an operator.\"},\"totalEntities()\":{\"notice\":\"Get a total number of entities.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/core/src/contracts/OperatorRegistry.sol\":\"OperatorRegistry\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts-upgradeable/=lib/core/lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/core/lib/openzeppelin-contracts/contracts/\",\":core/=lib/core/\",\":ds-test/=lib/core/lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/core/lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/core/lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/core/lib/openzeppelin-contracts/\"]},\"sources\":{\"lib/core/lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol\":{\"keccak256\":\"0x86c1470cbfd878491e5de030072b647352d36bd27122cffb928970b1945282aa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ad85dd393ee0a1917c57046abc5155f51f77844b2c6a42c05c1b8dd26d6ff3c1\",\"dweb:/ipfs/QmNqYc8To2NdnpP6E1tGz7t6A7beuENde5yovwov5pW1fA\"]},\"lib/core/src/contracts/OperatorRegistry.sol\":{\"keccak256\":\"0xa2d811a9525b3dcbef2dd87ba0ece6fbc30f8d404a8ec9ca01a42d16414dbed4\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://6c20a1f1a47c33c7bd1ebc53163de727622ee20ac0a883fee81676be5d8fc10d\",\"dweb:/ipfs/QmYDfR13eeiKws7UZ898ur86xYvq5RQb9p8RF5q65yyQsT\"]},\"lib/core/src/contracts/common/Registry.sol\":{\"keccak256\":\"0xc34427af1343155fbd7ba6811e468528a2b7b29881dc4f020f3fa80360dcacd1\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://efefaf9b812b5990b039c49eafdb699ef845e7916b5ea86a7c08bea91ab9ab14\",\"dweb:/ipfs/Qmbx8CmFXsornat4RYPHYhtieysGDDVDfKQi9M7o5fQJRQ\"]},\"lib/core/src/interfaces/IOperatorRegistry.sol\":{\"keccak256\":\"0x6a606147504ec73b241a390739a3554add67fbd1b7e1dd2e2011acbf68d077af\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d46135057ecf37739be6965bf8a5439f911b463f209f66b53b97823c7e7299fe\",\"dweb:/ipfs/QmQSTrGuR8opR8n2anAnQFu7KQysdFzDjR44xCC7dbqs8v\"]},\"lib/core/src/interfaces/common/IRegistry.sol\":{\"keccak256\":\"0x474c981518bb6ac974ba2a1274c49fd918d3b5acf1f3710e59786c5e3c8fc8bb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://db439e8880386dd308f8c67e612e9b15067fdffb29d6d0fd89c4edf820f30014\",\"dweb:/ipfs/QmQJuzgU17EZyPMoJNwknPkveK1Nwx1ByhZCBJzgRgcpvK\"]}},\"version\":1}","metadata":{"compiler":{"version":"0.8.25+commit.b61c2a91"},"language":"Solidity","output":{"abi":[{"inputs":[],"type":"error","name":"EntityNotExist"},{"inputs":[],"type":"error","name":"OperatorAlreadyRegistered"},{"inputs":[{"internalType":"address","name":"entity","type":"address","indexed":true}],"type":"event","name":"AddEntity","anonymous":false},{"inputs":[{"internalType":"uint256","name":"index","type":"uint256"}],"stateMutability":"view","type":"function","name":"entity","outputs":[{"internalType":"address","name":"","type":"address"}]},{"inputs":[{"internalType":"address","name":"entity_","type":"address"}],"stateMutability":"view","type":"function","name":"isEntity","outputs":[{"internalType":"bool","name":"","type":"bool"}]},{"inputs":[],"stateMutability":"nonpayable","type":"function","name":"registerOperator"},{"inputs":[],"stateMutability":"view","type":"function","name":"totalEntities","outputs":[{"internalType":"uint256","name":"","type":"uint256"}]}],"devdoc":{"kind":"dev","methods":{"entity(uint256)":{"params":{"index":"index of the entity to get"},"returns":{"_0":"address of the entity"}},"isEntity(address)":{"params":{"account":"address to check"},"returns":{"_0":"if the given address is an entity"}},"totalEntities()":{"returns":{"_0":"total number of entities added"}}},"version":1},"userdoc":{"kind":"user","methods":{"entity(uint256)":{"notice":"Get an entity given its index."},"isEntity(address)":{"notice":"Get if a given address is an entity."},"registerOperator()":{"notice":"Register the caller as an operator."},"totalEntities()":{"notice":"Get a total number of entities."}},"version":1}},"settings":{"remappings":["@openzeppelin/contracts-upgradeable/=lib/core/lib/openzeppelin-contracts-upgradeable/contracts/","@openzeppelin/contracts/=lib/core/lib/openzeppelin-contracts/contracts/","core/=lib/core/","ds-test/=lib/core/lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/","erc4626-tests/=lib/core/lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/","forge-std/=lib/forge-std/src/","openzeppelin-contracts-upgradeable/=lib/core/lib/openzeppelin-contracts-upgradeable/","openzeppelin-contracts/=lib/core/lib/openzeppelin-contracts/"],"optimizer":{"enabled":true,"runs":200},"metadata":{"bytecodeHash":"ipfs"},"compilationTarget":{"lib/core/src/contracts/OperatorRegistry.sol":"OperatorRegistry"},"evmVersion":"paris","libraries":{}},"sources":{"lib/core/lib/openzeppelin-contracts/contracts/utils/structs/EnumerableSet.sol":{"keccak256":"0x86c1470cbfd878491e5de030072b647352d36bd27122cffb928970b1945282aa","urls":["bzz-raw://ad85dd393ee0a1917c57046abc5155f51f77844b2c6a42c05c1b8dd26d6ff3c1","dweb:/ipfs/QmNqYc8To2NdnpP6E1tGz7t6A7beuENde5yovwov5pW1fA"],"license":"MIT"},"lib/core/src/contracts/OperatorRegistry.sol":{"keccak256":"0xa2d811a9525b3dcbef2dd87ba0ece6fbc30f8d404a8ec9ca01a42d16414dbed4","urls":["bzz-raw://6c20a1f1a47c33c7bd1ebc53163de727622ee20ac0a883fee81676be5d8fc10d","dweb:/ipfs/QmYDfR13eeiKws7UZ898ur86xYvq5RQb9p8RF5q65yyQsT"],"license":"BUSL-1.1"},"lib/core/src/contracts/common/Registry.sol":{"keccak256":"0xc34427af1343155fbd7ba6811e468528a2b7b29881dc4f020f3fa80360dcacd1","urls":["bzz-raw://efefaf9b812b5990b039c49eafdb699ef845e7916b5ea86a7c08bea91ab9ab14","dweb:/ipfs/Qmbx8CmFXsornat4RYPHYhtieysGDDVDfKQi9M7o5fQJRQ"],"license":"BUSL-1.1"},"lib/core/src/interfaces/IOperatorRegistry.sol":{"keccak256":"0x6a606147504ec73b241a390739a3554add67fbd1b7e1dd2e2011acbf68d077af","urls":["bzz-raw://d46135057ecf37739be6965bf8a5439f911b463f209f66b53b97823c7e7299fe","dweb:/ipfs/QmQSTrGuR8opR8n2anAnQFu7KQysdFzDjR44xCC7dbqs8v"],"license":"MIT"},"lib/core/src/interfaces/common/IRegistry.sol":{"keccak256":"0x474c981518bb6ac974ba2a1274c49fd918d3b5acf1f3710e59786c5e3c8fc8bb","urls":["bzz-raw://db439e8880386dd308f8c67e612e9b15067fdffb29d6d0fd89c4edf820f30014","dweb:/ipfs/QmQJuzgU17EZyPMoJNwknPkveK1Nwx1ByhZCBJzgRgcpvK"],"license":"MIT"}},"version":1},"id":39}
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "entity",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "entity_",
+          "type": "address"
+        }
+      ],
+      "name": "isEntity",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "registerOperator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalEntities",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "entity",
+          "type": "address"
+        }
+      ],
+      "name": "AddEntity",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "EntityNotExist",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "OperatorAlreadyRegistered",
+      "type": "error"
+    }
+  ]
+}
