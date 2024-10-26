@@ -3,6 +3,8 @@ name = "symbiotic-rs"
 version = "0.1.0"
 edition = "2021"
 exclude = ["contracts"]
+description = "Rust bindings for the Symbiotic Protocol smart contracts"
+license = "MIT"
 
 [dependencies]
 alloy-contract = { version = "0.1" }
