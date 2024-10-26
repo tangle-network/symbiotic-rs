@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "core/src/contracts/DelegatorFactory.sol";
 import "core/src/contracts/NetworkRegistry.sol";
 import "core/src/contracts/OperatorRegistry.sol";
 import "core/src/contracts/SlasherFactory.sol";

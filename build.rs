@@ -60,7 +60,6 @@ fn main() {
 
     // List of JSON files to move
     let json_files = vec![
-        "contracts/out/DelegatorFactory.sol/DelegatorFactory.json",
         "contracts/out/NetworkRegistry.sol/NetworkRegistry.json",
         "contracts/out/OperatorRegistry.sol/OperatorRegistry.json",
         "contracts/out/SlasherFactory.sol/SlasherFactory.json",
