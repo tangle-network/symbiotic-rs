@@ -6,7 +6,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     DelegatorFactory,
-    "contracts/out/DelegatorFactory.sol/DelegatorFactory.json"
+    "json/DelegatorFactory.json"
 );
 
 sol!(
@@ -14,7 +14,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     NetworkRegistry,
-    "contracts/out/NetworkRegistry.sol/NetworkRegistry.json"
+    "json/NetworkRegistry.json"
 );
 
 sol!(
@@ -22,7 +22,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     OperatorRegistry,
-    "contracts/out/OperatorRegistry.sol/OperatorRegistry.json"
+    "json/OperatorRegistry.json"
 );
 
 sol!(
@@ -30,7 +30,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     SlasherFactory,
-    "contracts/out/SlasherFactory.sol/SlasherFactory.json"
+    "json/SlasherFactory.json"
 );
 
 sol!(
@@ -38,7 +38,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     VaultConfigurator,
-    "contracts/out/VaultConfigurator.sol/VaultConfigurator.json"
+    "json/VaultConfigurator.json"
 );
 
 sol!(
@@ -46,7 +46,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     VaultFactory,
-    "contracts/out/VaultFactory.sol/VaultFactory.json"
+    "json/VaultFactory.json"
 );
 
 sol!(
@@ -54,7 +54,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     BaseSlasher,
-    "contracts/out/BaseSlasher.sol/BaseSlasher.json"
+    "json/BaseSlasher.json"
 );
 
 sol!(
@@ -62,7 +62,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     Slasher,
-    "contracts/out/Slasher.sol/Slasher.json"
+    "json/Slasher.json"
 );
 
 sol!(
@@ -70,7 +70,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     VetoSlasher,
-    "contracts/out/VetoSlasher.sol/VetoSlasher.json"
+    "json/VetoSlasher.json"
 );
 
 sol!(
@@ -78,7 +78,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     MetadataService,
-    "contracts/out/MetadataService.sol/MetadataService.json"
+    "json/MetadataService.json"
 );
 
 sol!(
@@ -86,7 +86,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     NetworkMiddlewareService,
-    "contracts/out/NetworkMiddlewareService.sol/NetworkMiddlewareService.json"
+    "json/NetworkMiddlewareService.json"
 );
 
 sol!(
@@ -94,7 +94,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     OptInService,
-    "contracts/out/OptInService.sol/OptInService.json"
+    "json/OptInService.json"
 );
 
 sol!(
@@ -102,7 +102,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     BaseDelegator,
-    "contracts/out/BaseDelegator.sol/BaseDelegator.json"
+    "json/BaseDelegator.json"
 );
 
 sol!(
@@ -110,7 +110,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     FullRestakeDelegator,
-    "contracts/out/FullRestakeDelegator.sol/FullRestakeDelegator.json"
+    "json/FullRestakeDelegator.json"
 );
 
 sol!(
@@ -118,7 +118,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     NetworkRestakeDelegator,
-    "contracts/out/NetworkRestakeDelegator.sol/NetworkRestakeDelegator.json"
+    "json/NetworkRestakeDelegator.json"
 );
 
 sol!(
@@ -126,7 +126,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     OperatorSpecificDelegator,
-    "contracts/out/OperatorSpecificDelegator.sol/OperatorSpecificDelegator.json"
+    "json/OperatorSpecificDelegator.json"
 );
 
 sol!(
@@ -134,7 +134,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     Hints,
-    "contracts/out/Hints.sol/Hints.json"
+    "json/Hints.json"
 );
 
 sol!(
@@ -142,7 +142,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     DelegatorHints,
-    "contracts/out/DelegatorHints.sol/BaseDelegatorHints.json"
+    "json/BaseDelegatorHints.json"
 );
 
 sol!(
@@ -150,7 +150,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     OptInServiceHints,
-    "contracts/out/OptInServiceHints.sol/OptInServiceHints.json"
+    "json/OptInServiceHints.json"
 );
 
 sol!(
@@ -158,7 +158,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     SlasherHints,
-    "contracts/out/SlasherHints.sol/SlasherHints.json"
+    "json/SlasherHints.json"
 );
 
 sol!(
@@ -166,7 +166,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     VaultHints,
-    "contracts/out/VaultHints.sol/VaultHints.json"
+    "json/VaultHints.json"
 );
 
 sol!(
@@ -174,7 +174,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     Vault,
-    "contracts/out/Vault.sol/Vault.json"
+    "json/Vault.json"
 );
 
 sol!(
@@ -182,7 +182,7 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     VaultStorage,
-    "contracts/out/VaultStorage.sol/VaultStorage.json"
+    "json/VaultStorage.json"
 );
 
 sol!(
@@ -190,5 +190,5 @@ sol!(
     #[sol(rpc)]
     #[derive(Debug, Serialize, Deserialize)]
     VaultTokenized,
-    "contracts/out/VaultTokenized.sol/VaultTokenized.json"
+    "json/VaultTokenized.json"
 );

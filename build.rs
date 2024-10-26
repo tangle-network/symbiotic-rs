@@ -1,4 +1,5 @@
 use std::env;
+use std::fs;
 use std::path::PathBuf;
 use std::process::Command;
 
@@ -52,4 +53,50 @@ fn main() {
             );
         }
     }
+
+    // Create a new directory for JSON files
+    let json_dir = root.join("json");
+    fs::create_dir_all(&json_dir).expect("Failed to create JSON directory");
+
+    // List of JSON files to move
+    let json_files = vec![
+        "contracts/out/DelegatorFactory.sol/DelegatorFactory.json",
+        "contracts/out/NetworkRegistry.sol/NetworkRegistry.json",
+        "contracts/out/OperatorRegistry.sol/OperatorRegistry.json",
+        "contracts/out/SlasherFactory.sol/SlasherFactory.json",
+        "contracts/out/VaultConfigurator.sol/VaultConfigurator.json",
+        "contracts/out/VaultFactory.sol/VaultFactory.json",
+        "contracts/out/BaseSlasher.sol/BaseSlasher.json",
+        "contracts/out/Slasher.sol/Slasher.json",
+        "contracts/out/VetoSlasher.sol/VetoSlasher.json",
+        "contracts/out/MetadataService.sol/MetadataService.json",
+        "contracts/out/NetworkMiddlewareService.sol/NetworkMiddlewareService.json",
+        "contracts/out/OptInService.sol/OptInService.json",
+        "contracts/out/BaseDelegator.sol/BaseDelegator.json",
+        "contracts/out/FullRestakeDelegator.sol/FullRestakeDelegator.json",
+        "contracts/out/NetworkRestakeDelegator.sol/NetworkRestakeDelegator.json",
+        "contracts/out/OperatorSpecificDelegator.sol/OperatorSpecificDelegator.json",
+        "contracts/out/Hints.sol/Hints.json",
+        "contracts/out/DelegatorHints.sol/BaseDelegatorHints.json",
+        "contracts/out/OptInServiceHints.sol/OptInServiceHints.json",
+        "contracts/out/SlasherHints.sol/SlasherHints.json",
+        "contracts/out/VaultHints.sol/VaultHints.json",
+        "contracts/out/Vault.sol/Vault.json",
+        "contracts/out/VaultStorage.sol/VaultStorage.json",
+        "contracts/out/VaultTokenized.sol/VaultTokenized.json",
+    ];
+
+    for json_file in json_files {
+        let source = root.join(json_file);
+        let destination = root.join("json").join(json_file.split('/').last().unwrap());
+        
+        if let Err(e) = fs::copy(&source, &destination) {
+            println!("Failed to copy {}: {}", json_file, e);
+        } else {
+            println!("Copied {} to {}", source.display(), destination.display());
+        }
+    }
+
+    // Update cargo to rerun if any JSON file changes
+    println!("cargo:rerun-if-changed={}", json_dir.display());
 }
