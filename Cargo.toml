@@ -4,3 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+alloy-contract = { version = "0.1" }
+alloy-sol-types = { version = "0.7.2", features = ["json"] }
+serde = { version = "1.0.208", default-features = false }
+
+[features]
+default = ["std"]
+std = []
