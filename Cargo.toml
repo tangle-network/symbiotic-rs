@@ -2,6 +2,7 @@
 name = "symbiotic-rs"
 version = "0.1.0"
 edition = "2021"
+exclude = ["contracts"]
 
 [dependencies]
 alloy-contract = { version = "0.1" }
