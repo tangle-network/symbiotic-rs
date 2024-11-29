@@ -1,14 +1,14 @@
 [package]
 name = "symbiotic-rs"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 exclude = ["contracts"]
 description = "Rust bindings for the Symbiotic Protocol smart contracts"
 license = "MIT"
 
 [dependencies]
-alloy-contract = { version = "0.1" }
-alloy-sol-types = { version = "0.7.2", features = ["json"] }
+alloy-contract = { version = "0.5.3" }
+alloy-sol-types = { version = "0.8.7", features = ["json"] }
 serde = { version = "1.0.208" }
 
 [dev-dependencies]
