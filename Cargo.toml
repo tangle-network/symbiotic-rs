@@ -7,8 +7,8 @@ description = "Rust bindings for the Symbiotic Protocol smart contracts"
 license = "MIT"
 
 [dependencies]
-alloy-contract = { version = "0.5.3" }
-alloy-sol-types = { version = "0.8.7", features = ["json"] }
+alloy-contract = { version = "0.9.2" }
+alloy-sol-types = { version = "0.8.12", features = ["json"] }
 serde = { version = "1.0.208" }
 
 [dev-dependencies]
