@@ -16,29 +16,52 @@ macro_rules! generate_sol_types {
 }
 
 generate_sol_types!(
-    NetworkRegistry, "json/NetworkRegistry.json",
-    OperatorRegistry, "json/OperatorRegistry.json",
-    SlasherFactory, "json/SlasherFactory.json",
-    VaultConfigurator, "json/VaultConfigurator.json",
-    VaultFactory, "json/VaultFactory.json",
-    BaseSlasher, "json/BaseSlasher.json",
-    Slasher, "json/Slasher.json",
-    VetoSlasher, "json/VetoSlasher.json",
-    MetadataService, "json/MetadataService.json",
-    NetworkMiddlewareService, "json/NetworkMiddlewareService.json",
-    OptInService, "json/OptInService.json",
-    BaseDelegator, "json/BaseDelegator.json",
-    FullRestakeDelegator, "json/FullRestakeDelegator.json",
-    NetworkRestakeDelegator, "json/NetworkRestakeDelegator.json",
-    OperatorSpecificDelegator, "json/OperatorSpecificDelegator.json",
-    Hints, "json/Hints.json",
-    DelegatorHints, "json/BaseDelegatorHints.json",
-    OptInServiceHints, "json/OptInServiceHints.json",
-    SlasherHints, "json/SlasherHints.json",
-    VaultHints, "json/VaultHints.json",
-    Vault, "json/Vault.json",
-    VaultStorage, "json/VaultStorage.json",
-    VaultTokenized, "json/VaultTokenized.json",
+    NetworkRegistry,
+    "json/NetworkRegistry.json",
+    OperatorRegistry,
+    "json/OperatorRegistry.json",
+    SlasherFactory,
+    "json/SlasherFactory.json",
+    VaultConfigurator,
+    "json/VaultConfigurator.json",
+    VaultFactory,
+    "json/VaultFactory.json",
+    BaseSlasher,
+    "json/BaseSlasher.json",
+    Slasher,
+    "json/Slasher.json",
+    VetoSlasher,
+    "json/VetoSlasher.json",
+    MetadataService,
+    "json/MetadataService.json",
+    NetworkMiddlewareService,
+    "json/NetworkMiddlewareService.json",
+    OptInService,
+    "json/OptInService.json",
+    BaseDelegator,
+    "json/BaseDelegator.json",
+    FullRestakeDelegator,
+    "json/FullRestakeDelegator.json",
+    NetworkRestakeDelegator,
+    "json/NetworkRestakeDelegator.json",
+    OperatorSpecificDelegator,
+    "json/OperatorSpecificDelegator.json",
+    Hints,
+    "json/Hints.json",
+    DelegatorHints,
+    "json/BaseDelegatorHints.json",
+    OptInServiceHints,
+    "json/OptInServiceHints.json",
+    SlasherHints,
+    "json/SlasherHints.json",
+    VaultHints,
+    "json/VaultHints.json",
+    Vault,
+    "json/Vault.json",
+    VaultStorage,
+    "json/VaultStorage.json",
+    VaultTokenized,
+    "json/VaultTokenized.json",
 );
 
 #[cfg(test)]
@@ -62,7 +85,9 @@ mod tests {
                 }
                 path
             }
-            Err(_) => panic!("Failed to locate `forge` executable. Make sure Foundry is installed."),
+            Err(_) => {
+                panic!("Failed to locate `forge` executable. Make sure Foundry is installed.")
+            }
         };
 
         // Run forge build in the contracts directory
@@ -109,24 +134,31 @@ mod tests {
         for json_file in json_files.clone() {
             let source = contracts_dir.join("out").join(json_file);
             let destination = json_dir.join(json_file.split('/').last().unwrap());
-            
+
             // Read the source JSON file
             let json_content = fs::read_to_string(&source)
-                .expect(&format!("Failed to read {}", source.display()));
-            
+                .unwrap_or_else(|_| panic!("Failed to read {}", source.display()));
+
             // Parse the JSON content
             let json: serde_json::Value = serde_json::from_str(&json_content)
-                .expect(&format!("Failed to parse JSON from {}", source.display()));
-            
+                .unwrap_or_else(|_| panic!("Failed to parse JSON from {}", source.display()));
+
             // Extract only the "abi" field
             if let Some(abi) = json.get("abi") {
                 let abi_only = serde_json::json!({ "abi": abi });
-                
+
                 // Write the "abi" only JSON to the destination
-                fs::write(&destination, serde_json::to_string_pretty(&abi_only).unwrap())
-                    .expect(&format!("Failed to write to {}", destination.display()));
-                
-                println!("Extracted ABI from {} to {}", source.display(), destination.display());
+                fs::write(
+                    &destination,
+                    serde_json::to_string_pretty(&abi_only).unwrap(),
+                )
+                .unwrap_or_else(|_| panic!("Failed to write to {}", destination.display()));
+
+                println!(
+                    "Extracted ABI from {} to {}",
+                    source.display(),
+                    destination.display()
+                );
             } else {
                 println!("Warning: No 'abi' field found in {}", source.display());
             }
@@ -135,7 +167,11 @@ mod tests {
         // Assert that all expected JSON files were created
         for json_file in json_files {
             let file_path = json_dir.join(json_file.split('/').last().unwrap());
-            assert!(file_path.exists(), "Expected JSON file not found: {}", file_path.display());
+            assert!(
+                file_path.exists(),
+                "Expected JSON file not found: {}",
+                file_path.display()
+            );
         }
     }
 }
